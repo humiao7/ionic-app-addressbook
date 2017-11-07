@@ -75,76 +75,33 @@
     $stateProvider
     // setup an abstract state for the tabs directive
 
+    //登陆页面
       .state('login', {
         url: '/login',
         templateUrl: 'build/pages/login/login.html',
         controller: 'loginCtrl'
       })
-
       .state('tab', {
         url: '/tab',
         templateUrl: 'build/pages/tab/tab.html',
         controller: 'tabCtrl',
         controllerAs: 'vm'
-      })
-      // Each tab has its own nav history stack:
-      .state('tab.message', {
-        url: '/message',
-        views: {
-          'tab-message': {
-            templateUrl: 'build/pages/message/message.html',
-            controller: ''
-          }
-        }
-      })
-      .state('tab.application', {
-        url: '/application',
-        views: {
-          'tab-application': {
-            templateUrl: 'build/pages/application/application.html',
-            controller: ''
-          }
-        }
-      })
-      .state('tab.contact', {
-        url: '/contact',
-        views: {
-          'tab-contact': {
-            templateUrl: 'build/pages/contact/contact.html',
-            controller: ''
-          }
-        }
-      })
-      .state('tab.myInfo', {
-        url: '/myInfo',
-        views: {
-          'tab-myInfo': {
-            templateUrl: 'build/pages/myInfo/myInfo.html',
-            controller: ''
-          }
-        }
       });
 
-    if (!window.localStorage.needGuid || window.localStorage.needGuid == "true") {
-      //if (baseConfig.debug) {
-      console.log('app.js into guide ');
-      //}
-      $urlRouterProvider.otherwise('/guide');
+    // 打开app，引导界面跳转到登陆页面
+    $urlRouterProvider.otherwise('/login');
 
+    // 引导页面
+   /* if (!window.localStorage.needGuid || window.localStorage.needGuid == "true") {
+      $urlRouterProvider.otherwise('/guide');
     } else {
 
-      console.log('window.localStorage.userToken ' + window.localStorage.userToken);
-
+      // 登陆超时，或者页面失效
       if (window.localStorage.userToken && window.localStorage.userToken != "") {
         $urlRouterProvider.otherwise('/tab/message');
-        /*if (window.localStorage.getItem('gesturePassword') && window.localStorage.getItem('gesturePassword') != '') {
-         $urlRouterProvider.otherwise('/gesture-lock');
-         } else {
-         $urlRouterProvider.otherwise('/tab/message');
-         }*/
       } else {
         $urlRouterProvider.otherwise('/login');
       }
-    }
+    }*/
   }
 })();

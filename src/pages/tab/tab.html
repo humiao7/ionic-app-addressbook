@@ -16,24 +16,21 @@
   </ion-tab>
 </ion-tabs>-->
 <ion-view view-title="应用" class="hms-tab">
-    <div class="hms-tab-page"
-         ng-include="'build/pages/message/message.html'"
-         ng-show="vm.tabArray[0].isActive"></div>
-    <div class="hms-tab-page"
-         ng-include="'build/pages/application/application.html'"
-         ng-show="vm.tabArray[1].isActive"></div>
-    <div class="hms-tab-page"
-         ng-include="'build/pages/contact/contact.html'"
-         ng-show="vm.tabArray[2].isActive"></div>
-    <div class="hms-tab-page"
-         ng-include="'build/pages/myInfo/myInfo.html'"
-         ng-show="vm.tabArray[3].isActive"></div>
+  <div class="hms-tab-page"
+       ng-include="'build/pages/keyboard-page/keyboard-page.html'"
+       ng-show="vm.tabArray[0].isActive"></div>
+  <div class="hms-tab-page"
+       ng-include="'build/pages/phone-record/phone-record.html'"
+       ng-show="vm.tabArray[1].isActive"></div>
+  <div class="hms-tab-page"
+       ng-include="'build/pages/contacts/contacts.html'"
+       ng-show="vm.tabArray[2].isActive"></div>
 
-    <ion-footer-bar class="hms-tab-bar">
-        <div ng-repeat="tab in vm.tabArray" ng-click="vm.clickTab(tab)" class="hms-tab-item">
-            <div class="hms-tab-icon" ng-class="tab.isActive? tab.onIcon: tab.offIcon">
-            </div>
-            <div class="hms-tab-name">{{tab.name}}</div>
-        </div>
-    </ion-footer-bar>
+  <ion-footer-bar class="hms-tab-bar">
+    <div ng-repeat="tab in vm.tabArray" ng-click="vm.clickTab(tab)" class="hms-tab-item">
+      <div class="hms-tab-icon" ng-class="tab.isActive? tab.onIcon: tab.offIcon">
+      </div>
+      <div class="hms-tab-name">{{tab.name}}</div>
+    </div>
+  </ion-footer-bar>
 </ion-view>

@@ -1,0 +1,31 @@
+.contacts {
+  background-color: #efefef;
+  .bar-header {
+    background-color: #0a9dc7;
+    padding: 0 15px;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    .buttons:first-of-type {
+      flex-basis: 15%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-start;
+      height: 100%;
+    }
+    .input-text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      color: #fff;
+      font-size: 1rem;
+    }
+    .buttons:last-of-type {
+      display: inline-flex;
+      flex-basis: 15%;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+}

@@ -39,7 +39,7 @@
         StatusBar.styleDefault();
       }
     });
-    
+
     /////////////////////////////////////
     $timeout(function () {
       $scope.loginScroll = $ionicScrollDelegate.$getByHandle('loginScroll');
@@ -503,5 +503,8 @@
         console.log('loginCtrl.$destroy');
       }
     });
-  }
+    $scope.login2 = function () {
+      $state.go('tab');
+    }
+  };
 })();

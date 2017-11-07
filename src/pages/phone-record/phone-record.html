@@ -1,0 +1,26 @@
+<ion-view view-title="通话记录" class="phone-record" ng-controller="phoneRecordCtrl as phoneRecordVM">
+  <ion-header-bar class="bar-header">
+    <div class="buttons">
+    </div>
+    <div class="input-text"><span>通话记录</span></div>
+    <div class="buttons">
+    </div>
+  </ion-header-bar>
+  <ion-header-bar class="bar-subheader">
+    <div class="search-border">
+      <div><i class="icon ion-android-search"></i></div>
+      <input placeholder="搜索联系人" ng-model="phoneRecordVM.search">
+    </div>
+  </ion-header-bar>
+  <div></div>
+  <ion-content>
+    <ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()"></ion-refresher>
+    <ul class="list">
+      <li class="item" ng-repeat="record in phoneRecordVM.data|filter:{contact:phoneRecordVM.search}"
+          ng-click="callPhone(record)">
+        <div class="contact"><h2>{{record.contact}}</h2><span>{{record.status}}</span></div>
+        <div class="time">{{record.time}}</div>
+      </li>
+    </ul>
+  </ion-content>
+</ion-view>
