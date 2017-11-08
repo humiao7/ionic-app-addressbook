@@ -28,4 +28,60 @@
       justify-content: flex-end;
     }
   }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    .keyboard {
+      padding: 0 20px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      .row {
+        display: inline-flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 12px;
+        .key-button {
+          width: 55px;
+          height: 55px;
+          background-color: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          span {
+            font-size: 1.8rem;
+            text-align: center;
+          }
+        }
+      }
+      .phone {
+        display: inline-flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        margin-top: -4px;
+        margin-bottom: 10px;
+        .phone-button {
+          width: 55px;
+          height: 55px;
+          background-color: #33cd5f;;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          i {
+            font-size: 1.8rem;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
 }

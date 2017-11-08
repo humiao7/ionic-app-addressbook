@@ -1,4 +1,4 @@
-<ion-view view-title="消息" class="keyboard-page">
+<ion-view view-title="消息" class="keyboard-page" ng-controller="keyboardCtrl as keyboardVM">
   <ion-header-bar class="bar-header">
     <div class="buttons">
     </div>
@@ -6,4 +6,18 @@
     <div class="buttons">
     </div>
   </ion-header-bar>
+  <ion-content class="content" scroll="false">
+    <div class="keyboard">
+      <div class="row" ng-repeat="item in keyboardVM.pageData">
+        <div class="key-button button" ng-repeat="x in item">
+          <span>{{x}}</span>
+        </div>
+      </div>
+      <div class="phone">
+        <div class="phone-button button">
+          <i class="icon ion-ios-telephone"></i>
+        </div>
+      </div>
+    </div>
+  </ion-content>
 </ion-view>
