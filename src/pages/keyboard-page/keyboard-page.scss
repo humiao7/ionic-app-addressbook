@@ -1,5 +1,4 @@
 .keyboard-page {
-  background-color: #efefef;
   .bar-header {
     background-color: #0a9dc7;
     padding: 0 15px;
@@ -34,13 +33,47 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
+    .phone-number {
+      flex: 1;
+      width: 100%;
+      padding: 20px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-around;
+      .add-sign {
+        flex-basis: 10%;
+        i {
+          font-size: 1.8rem;
+          color: rgba(10, 157, 199, 0.69);
+        }
+      }
+      .numbers {
+        flex-basis: 70%;
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        span {
+          font-size: 1.8rem;
+        }
+      }
+      .rollback {
+        flex-basis: 10%;
+        i {
+          font-size: 1.8rem;
+          color: rgba(10, 157, 199, 0.69);
+        }
+      }
+    }
     .keyboard {
+      flex-basis: 70%;
       padding: 0 20px;
       width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: flex-end;
+      background-color: #FFFFFF;
       .row {
         display: inline-flex;
         flex-wrap: nowrap;
@@ -55,6 +88,7 @@
           align-items: center;
           justify-content: center;
           border-radius: 50%;
+          border: 1px solid rgba(10, 157, 199, 0.69);
           span {
             font-size: 1.8rem;
             text-align: center;
@@ -62,12 +96,14 @@
         }
       }
       .phone {
+        flex-basis: 17.5%;
         display: inline-flex;
         flex-wrap: nowrap;
         align-items: center;
         justify-content: center;
         margin-top: -4px;
         margin-bottom: 10px;
+        background-color: #FFFFFF;
         .phone-button {
           width: 55px;
           height: 55px;

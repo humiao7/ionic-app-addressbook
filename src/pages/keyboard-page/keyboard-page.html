@@ -7,9 +7,14 @@
     </div>
   </ion-header-bar>
   <ion-content class="content" scroll="false">
+    <div class="phone-number" ng-show="keyboardVM.callNumber!=''">
+      <div class="add-sign"><i class="icon ion-plus-circled"></i></div>
+      <div class="numbers"><span>{{keyboardVM.callNumber}}</span></div>
+      <div class="rollback" ng-click="keyboardVM.backSpace()"><i class="icon ion-backspace"></i></div>
+    </div>
     <div class="keyboard">
       <div class="row" ng-repeat="item in keyboardVM.pageData">
-        <div class="key-button button" ng-repeat="x in item">
+        <div class="key-button button" ng-repeat="x in item" ng-click="keyboardVM.clickButton(x)">
           <span>{{x}}</span>
         </div>
       </div>
