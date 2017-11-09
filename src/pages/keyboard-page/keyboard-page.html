@@ -2,13 +2,13 @@
   <ion-header-bar class="bar-header">
     <div class="buttons">
     </div>
-    <div class="input-text"><span>拨号</span></div>
+    <div class="input-text"><span>拨号{{keyboardVM.timer}}</span></div>
     <div class="buttons">
     </div>
   </ion-header-bar>
   <ion-content class="content" scroll="false">
     <div class="phone-number" ng-show="keyboardVM.callNumber!=''">
-      <div class="add-sign"><i class="icon ion-plus-circled"></i></div>
+      <div class="add-sign" ng-click="keyboardVM.breakPhone()"><i class="icon ion-plus-circled"></i></div>
       <div class="numbers"><span>{{keyboardVM.callNumber}}</span></div>
       <div class="rollback" ng-click="keyboardVM.backSpace()"><i class="icon ion-backspace"></i></div>
     </div>
@@ -19,7 +19,7 @@
         </div>
       </div>
       <div class="phone">
-        <div class="phone-button button">
+        <div class="phone-button button" ng-click="keyboardVM.callPhoneNumber()">
           <i class="icon ion-ios-telephone"></i>
         </div>
       </div>
