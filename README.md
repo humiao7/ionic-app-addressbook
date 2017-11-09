@@ -1,6 +1,3 @@
-# [Hand Portal] &middot; [![CircleCI Status](https://circleci.com/gh/facebook/react.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/facebook/react) [![Build Status](https://img.shields.io/travis/facebook/react/master.svg?style=flat)](https://travis-ci.org/facebook/react) [![Coverage Status](https://img.shields.io/coveralls/facebook/react/master.svg?style=flat)](https://coveralls.io/github/facebook/react?branch=master) [![npm version](https://img.shields.io/npm/v/react.svg?style=flat)](https://www.npmjs.com/package/react) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md#pull-requests)
-
-
 # 移动前端开发-Ionic1工程项目-通讯录
 
 这个一个基于汉得移动门户种子工程项目开发的通讯录APP，目前还在完善中
@@ -32,6 +29,5 @@
 **Note:** Is your build slow? Update `npm` to 3.x: `npm install -g npm`.
 
 ## App 预览
-* App功能预览.
 ![](https://github.com/humiao7/ionic-app-addressbook/raw/master/src/assets/键盘拨号.png) 
 ![](https://github.com/humiao7/ionic-app-addressbook/raw/master/src/assets/通话记录.png) 
