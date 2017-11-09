@@ -43,8 +43,9 @@
 * 主菜单界面 - [ [模版](https://github.com/driftyco/ionic-conference-app/blob/master/src/pages/speaker-list/speaker-list.html) | [代码](https://github.com/driftyco/ionic-conference-app/blob/master/src/pages/speaker-list/speaker-list.ts) ]
 
 ## App 预览
-
 App功能预览.
+![](https://github.com/humiao7/ionic-app-addressbook/raw/master/src/assets/键盘拨号.png) 
+![](https://github.com/humiao7/ionic-app-addressbook/raw/master/src/assets/通话记录.png) 
 
 - [主菜单界面](https://github.com/driftyco/ionic-conference-app/blob/master/src/pages/schedule/schedule.html)
 
