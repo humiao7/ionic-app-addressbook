@@ -12,3 +12,25 @@
 @import "../pages/phone-record/phone-record";
 @import "../pages/contacts/contacts";
 
+//对话框样式
+.popup-container.active .popup {
+  border-radius: 10px;
+}
+
+.popup-body {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.button.button-positive {
+  border-color: transparent;
+  background: #e42112;
+  color: #fff;
+}
+
+.button.button-positive.activated, .button.button-positive.active {
+  border-color: #a2a2a2;
+  background: #a2a2a2;
+}
+
+
