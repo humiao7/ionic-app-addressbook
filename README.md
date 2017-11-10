@@ -31,4 +31,4 @@
 ## App预览
 ![](https://github.com/humiao7/ionic-app-addressbook/raw/master/src/assets/键盘拨号.png) 
 ![](https://github.com/humiao7/ionic-app-addressbook/raw/master/src/assets/通话记录.png)
- ![](https://github.com/humiao7/ionic-app-addressbook/raw/master/src/assets/通讯录.png) 
+![](https://github.com/humiao7/ionic-app-addressbook/raw/master/src/assets/通讯录.png) 

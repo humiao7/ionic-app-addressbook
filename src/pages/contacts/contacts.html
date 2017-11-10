@@ -1,24 +1,25 @@
-<ion-view view-title="通讯录" class="contacts">
+<ion-view view-title="通讯录" class="contacts" ng-controller="contactsCtrl as contactsVM">
   <ion-header-bar class="bar-header">
     <div class="buttons">
     </div>
     <div class="input-text"><span>通讯录</span></div>
     <div class="buttons">
+      <i class="icon ion-plus-circled"></i>
     </div>
   </ion-header-bar>
   <ion-header-bar class="bar-subheader">
     <div class="search-border">
       <div><i class="icon ion-android-search"></i></div>
-      <input placeholder="搜索联系人">
+      <input placeholder="搜索联系人" ng-model="contactsVM.search">
     </div>
   </ion-header-bar>
   <ion-content>
     <ion-list>
-      <ion-item>
+      <ion-item ng-repeat="contact in contactsVM.pageData|filter:{name:contactsVM.search}">
         <img src="build//assets/img/contacts/contact_head.png">
         <div>
-          <h3>张三</h3>
-          <span>123456789</span>
+          <h3>{{contact.name}}</h3>
+          <span>{{contact.phone_num}}</span>
         </div>
       </ion-item>
     </ion-list>
