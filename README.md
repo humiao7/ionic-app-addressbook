@@ -4,7 +4,7 @@
 
 
 ## 特点
-**此工程在ionic1的基础上进行改进，仅实现一个电话拨号界面的基本功能.** 
+**此工程在ionic1的基础上进行改进，实现一个电话拨号界面的基本功能.**
 * 实现了电话拨号的功能.
 * 添加记录通话时间功能.
 * 添加查看通话记录功能
@@ -28,6 +28,6 @@
 
 **Note:** Is your build slow? Update `npm` to 3.x: `npm install -g npm`.
 
-## App 预览
+## App预览
 ![](https://github.com/humiao7/ionic-app-addressbook/raw/master/src/assets/键盘拨号.png) 
 ![](https://github.com/humiao7/ionic-app-addressbook/raw/master/src/assets/通话记录.png) 
