@@ -1,33 +1,33 @@
 .phone-record {
   background-color: #efefef;
   .bar-header {
-     background-color: #0a9dc7;
-     padding: 0 15px;
-     display: inline-flex;
-     flex-direction: row;
-     flex-wrap: nowrap;
-     .buttons:first-of-type {
-       flex-basis: 15%;
-       display: inline-flex;
-       align-items: center;
-       justify-content: flex-start;
-       height: 100%;
-     }
-     .input-text {
-       display: flex;
-       align-items: center;
-       justify-content: center;
-       flex: 1;
-       color: #fff;
-       font-size: 1rem;
-     }
-     .buttons:last-of-type {
-       display: inline-flex;
-       flex-basis: 15%;
-       align-items: center;
-       justify-content: flex-end;
-     }
-   }
+    background-color: #0a9dc7;
+    padding: 0 15px;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    .buttons:first-of-type {
+      flex-basis: 15%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-start;
+      height: 100%;
+    }
+    .input-text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      color: #fff;
+      font-size: 1rem;
+    }
+    .buttons:last-of-type {
+      display: inline-flex;
+      flex-basis: 15%;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
 
   .bar-subheader {
     padding: 5px 15px;
@@ -62,12 +62,8 @@
   ion-content {
     display: flex;
     flex-direction: column;
-    .list {
-      display: flex;
-      flex-direction: column;
-      .item {
-        height: 65px;
-        padding: 5px 15px;
+    ion-list {
+      ion-item {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -95,5 +91,8 @@
         }
       }
     }
+  }
+  .item-complex .item-content{
+    padding: 16px;
   }
 }

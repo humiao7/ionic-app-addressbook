@@ -15,12 +15,15 @@
   <div></div>
   <ion-content>
     <ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()"></ion-refresher>
-    <ul class="list">
-      <li class="item" ng-repeat="record in phoneRecordVM.data|filter:{contact:phoneRecordVM.search}"
-          ng-click="callPhone(record)">
-        <div class="contact"><h2>{{record.contact}}</h2><span>{{record.status}}</span></div>
-        <div class="time">{{record.time}}</div>
-      </li>
-    </ul>
+    <ion-list>
+      <ion-item ng-repeat="record in phoneRecordVM.data|filter:{contact:phoneRecordVM.search}">
+        <div class="contact" ng-click="callPhone(record)">
+          <h2>{{record.contact}}</h2>
+          <span>{{record.status}}</span>
+        </div>
+        <div class="time" ng-click="callPhone(record)">{{record.time}}</div>
+        <ion-option-button class="button-assertive" ng-click="deleteRecord($index)">删除</ion-option-button>
+      </ion-item>
+    </ion-list>
   </ion-content>
 </ion-view>

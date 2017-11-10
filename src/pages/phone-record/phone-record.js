@@ -28,6 +28,11 @@
       $window.location.href = "tel:" + record.phone_num;
     };
 
+    //删除通话记录
+    $scope.deleteRecord=function(index){
+      phoneRecordVM.data.splice(index,1);
+    }
+
     //下拉刷新，两秒后自动收起来
     $scope.doRefresh = function () {
       $timeout(function () {
