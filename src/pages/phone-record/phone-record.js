@@ -7,9 +7,9 @@
     .module('applicationModule')
     .controller('phoneRecordCtrl', phoneRecordCtrl);
 
-  phoneRecordCtrl.$inject = ['$scope', '$window', '$timeout'];
+  phoneRecordCtrl.$inject = ['$scope', '$window'];
 
-  function phoneRecordCtrl($scope, $window, $timeout) {
+  function phoneRecordCtrl($scope, $window) {
     var phoneRecordVM = this;
     // 对象----------
     phoneRecordVM.search = ''; // 搜索参数
@@ -27,7 +27,7 @@
     // 方法-----------
     phoneRecordVM.callPhone = callPhone;   // 拨打电话
     phoneRecordVM.deleteRecord = deleteRecord;   // 删除通话记录
-    phoneRecordVM.doRefresh = doRefresh;  //下拉刷新，两秒后自动收起来
+    phoneRecordVM.doRefresh = doRefresh;  //下拉刷新
 
     function callPhone(record) {
       $window.location.href = "tel:" + record.phone_num;
@@ -35,6 +35,7 @@
 
     function deleteRecord(index) {
       phoneRecordVM.data.splice(index, 1);
+      window.localStorage.phoneRecordData = JSON.stringify(phoneRecordVM.data);
     }
 
     function doRefresh() {
@@ -42,9 +43,6 @@
         phoneRecordVM.data = JSON.parse(window.localStorage.phoneRecordData || '{}');
       }
       $scope.$broadcast('scroll.refreshComplete');
-      /*$timeout(function () {
-       $scope.$broadcast('scroll.refreshComplete');
-       }, 2000);*/
     }
 
   }
