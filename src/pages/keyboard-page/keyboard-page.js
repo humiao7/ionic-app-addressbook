@@ -47,6 +47,21 @@
       alertPopup.then(function (res) {
         $interval.cancel(keyboardVM.onCalling);
         console.log('通话时间：' + keyboardVM.timer);
+        var str_hours = parseInt(times / 3600) == 0 ? '' : (parseInt(times / 3600) + '时');
+        var str_minis = parseInt((times % 3600) / 60) == 0 ? '' : (parseInt((times % 3600) / 60) + '分');
+        var str_second = (times % 3600) % 60 == 0 ? '' : ((times % 3600) % 60 + '秒');
+        var date_now = new Date();
+
+        if (window.localStorage.phoneRecordData) {
+          var temp = JSON.parse(window.localStorage.phoneRecordData || '{}');
+        }
+        temp.push({
+          contact: phone_number,
+          status: '呼出' + str_hours + str_minis + str_second,
+          time: date_now.getFullYear() + '-' + (date_now.getMonth() + 1) + '-' + date_now.getDate(),
+          phone_num: phone_number
+        });
+        window.localStorage.phoneRecordData = JSON.stringify(temp);
       });
     }
   }
